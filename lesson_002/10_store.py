@@ -42,7 +42,13 @@ lamps_quantity = lamps_item['quantity']
 lamps_price = lamps_item['price']
 lamps_cost = lamps_quantity * lamps_price
 print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб')
-
+tables_cost = store[goods['Стол']][0]['quantity'] * store[goods['Стол']][0]['price'] + store[goods['Стол']][1]['quantity'] * store[goods['Стол']][1]['price']
+table_code = goods['Стол'][0] + goods['Стол'][1]
+tables_item = store[table_code][0]
+tables_quantity = tables_item['quantity']
+tables_price = tables_item ['price']
+tables_cost = tables_quantity * tables_price
+print('Стол-', tables_quantity, 'шт, стоимость', tables_cost, 'руб')
 # Вывести стоимость каждого товара на складе: один раз распечать сколько всего столов, стульев и т.д. на складе
 # Формат строки <товар> - <кол-во> шт, стоимость <общая стоимость> руб
 
